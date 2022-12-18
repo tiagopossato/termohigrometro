@@ -1,1 +1,1 @@
-# termometro
+# termohigrometro
