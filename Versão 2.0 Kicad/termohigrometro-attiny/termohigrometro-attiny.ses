@@ -1,0 +1,662 @@
+
+(session "termohigrometro-attiny.ses"
+  (base_design "termohigrometro-attiny.dsn")
+  (placement
+    (resolution um 10)
+    (component "BK-18650-PC4:BAT_BK-18650-PC4"
+      (place BT1 1740000 -908050 front 90)
+    )
+    (component TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal
+      (place J6 1435550 -1246150 front 0)
+    )
+    (component Capacitor_THT:CP_Radial_D6.3mm_P2.50mm
+      (place C8 1467300 -1049300 front 270)
+    )
+    (component MountingHole:MountingHole_3.2mm_M3
+      (place H2 1048200 -1208050 front 0)
+      (place H3 1473200 -908050 front 0)
+      (place H1 1048200 -613050 front 0)
+    )
+    (component Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm
+      (place C2 1187450 -857250 front 0)
+    )
+    (component TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x04_P3.50mm_Horizontal
+      (place J4 1281900 -562350 front 180)
+    )
+    (component TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x02_P3.50mm_Horizontal::1
+      (place J3 1327600 -1247000 front 180)
+    )
+    (component "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
+      (place D1 1175200 -706400 front 270)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal
+      (place R5 1429200 -769900 front 180)
+    )
+    (component TerminalBlock_4Ucon:TerminalBlock_4Ucon_1x04_P3.50mm_Horizontal::1
+      (place J5 1495950 -560350 front 180)
+    )
+    (component Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm::1
+      (place C9 1448250 -661950 front 0)
+    )
+    (component "Package_DIP:DIP-8_W7.62mm"
+      (place U1 1105450 -916050 front 0)
+    )
+    (component Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm::2
+      (place C7 1339900 -1163600 front 180)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal::1
+      (place R2 1105350 -693700 front 270)
+    )
+    (component Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical
+      (place J1 1314450 -927100 front 0)
+    )
+    (component Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal::2
+      (place R3 1473650 -712750 front 180)
+    )
+    (component "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+      (place U2 1314900 -1068600 back 270)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version "6.0.2+dfsg-1")
+    )
+    (library_out 
+      (padstack "Via[0-1]_800:400_um"
+        (shape
+          (circle "cobre frontal" 8000 0 0)
+        )
+        (shape
+          (circle "Cobre traseira" 8000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net GND
+        (wire
+          (path "Cobre traseira" 5000
+            1339474 -1120103
+            1349781 -1109796
+            1349781 -1094821
+            1350508 -1094094
+            1350508 -1077393
+            1353601 -1074300
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1353601 -1074300
+            1460176 -1074300
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1128953 -992250
+            1128953 -1000126
+            1159914 -1031087
+            1234116 -1031087
+            1269759 -995444
+            1322306 -995444
+            1339850 -977900
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1246900 -562350
+            1246900 -534847
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1246900 -534847
+            1160938 -534847
+            1156896 -538889
+            1156896 -639284
+            1237450 -719838
+            1237450 -857250
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1246900 -576101
+            1246900 -562350
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1246900 -576101
+            1246900 -589853
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1105450 -992250
+            1128953 -992250
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1460950 -560350
+            1460950 -649250
+            1448250 -661950
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1339474 -1120103
+            1339900 -1120529
+            1339900 -1163600
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1337900 -1120103
+            1339474 -1120103
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1337900 -1110101
+            1337900 -1100100
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1460950 -535348
+            1451434 -525832
+            1372066 -525832
+            1308045 -589853
+            1246900 -589853
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1643500 -545050
+            1631297 -532847
+            1463451 -532847
+            1460950 -535348
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1337900 -1110101
+            1337900 -1120103
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1468605 -1082729
+            1460176 -1074300
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1470550 -1246150
+            1470550 -1084674
+            1468605 -1082729
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1468605 -1082729
+            1599873 -951461
+            1599873 -588677
+            1643500 -545050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1460950 -560350
+            1460950 -535348
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1836500 -545050
+            1643500 -545050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1467300 -1074300
+            1460176 -1074300
+          )
+        )
+      )
+      (net +3V3
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1037100
+            1314900 -1014597
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1014597
+            1410300 -1014597
+            1429200 -995697
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1037179
+            1314900 -1037100
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1105350 -693700
+            1081625 -717425
+            1081625 -999472
+            1123243 -1041090
+            1313722 -1041090
+            1314900 -1039912
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1429200 -769900
+            1429200 -995697
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1429200 -995697
+            1467300 -1033797
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1038506
+            1314900 -1039912
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1281900 -534847
+            1271487 -524434
+            1156646 -524434
+            1146498 -534582
+            1146498 -693700
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1167199 -706400
+            1194121 -733322
+            1194121 -850579
+            1187450 -857250
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1167199 -706400
+            1159198 -706400
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1175200 -706400
+            1167199 -706400
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1039912
+            1314900 -1059603
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1181650 -916050
+            1205153 -916050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1187450 -857250
+            1187450 -891098
+            1187451 -891098
+            1205153 -908800
+            1205153 -916050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1038506
+            1314900 -1037416
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1100100
+            1314900 -1059603
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1314900 -1037179
+            1314900 -1037416
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1146498 -693700
+            1105350 -693700
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1159198 -706400
+            1146498 -693700
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1281900 -562350
+            1281900 -534847
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1429200 -769900
+            1429200 -757200
+            1473650 -712750
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1467300 -1049300
+            1467300 -1033797
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1498250 -661950
+            1498250 -688150
+            1473650 -712750
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1498250 -661950
+            1495950 -659650
+            1495950 -560350
+          )
+        )
+      )
+      (net RST
+        (wire
+          (path "Cobre traseira" 3500
+            1125493 -916050
+            1146391 -936948
+            1146391 -1004478
+            1163747 -1021834
+            1225636 -1021834
+            1269570 -977900
+            1299197 -977900
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1314450 -977900
+            1299197 -977900
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1125493 -916050
+            1126703 -916050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1106841 -916050
+            1125493 -916050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1106841 -916050
+            1105450 -916050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1170645 -782600
+            1175200 -782600
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1170645 -782600
+            1158947 -782600
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1126703 -795300
+            1146247 -795300
+            1158947 -782600
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1105350 -795300
+            1126703 -795300
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1126703 -795300
+            1126703 -916050
+          )
+        )
+      )
+      (net MISO
+        (wire
+          (path "Cobre traseira" 3500
+            1181650 -966850
+            1160397 -966850
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1314450 -927100
+            1299197 -927100
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1299197 -927100
+            1218469 -1007828
+            1169549 -1007828
+            1160397 -998676
+            1160397 -966850
+          )
+        )
+      )
+      (net SCK
+        (wire
+          (path "Cobre traseira" 3500
+            1160397 -941450
+            1153394 -948453
+            1153394 -1001577
+            1166648 -1014831
+            1222432 -1014831
+            1284763 -952500
+            1299197 -952500
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1365947 -706647
+            1310023 -650723
+            1310023 -600962
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1372050 -712750
+            1365947 -706647
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1425950 -547723
+            1425950 -560350
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1211900 -573225
+            1211900 -562350
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1211900 -573225
+            1211900 -587603
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1314450 -952500
+            1299197 -952500
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1181650 -941450
+            1160397 -941450
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1310023 -600962
+            1225259 -600962
+            1211900 -587603
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1310023 -600962
+            1375888 -535097
+            1425950 -535097
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1425950 -547723
+            1425950 -535097
+          )
+        )
+      )
+      (net MOSI
+        (wire
+          (path "Cobre traseira" 3500
+            1327600 -769900
+            1176900 -619200
+            1176900 -562350
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1327600 -769900
+            1327600 -867553
+            1315862 -879291
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1315862 -879291
+            1202903 -992250
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1339850 -952500
+            1356821 -935529
+            1356821 -920250
+            1315862 -879291
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1390950 -560350
+            1390950 -718259
+            1339309 -769900
+            1327600 -769900
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1181650 -992250
+            1202903 -992250
+          )
+        )
+      )
+      (net +BATT
+        (wire
+          (path "Cobre traseira" 5000
+            1836500 -1274050
+            1643500 -1274050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1424299 -1246150
+            1452199 -1274050
+            1643500 -1274050
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1424299 -1246150
+            1413047 -1246150
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1435550 -1246150
+            1424299 -1246150
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1292600 -1247000
+            1292600 -1274503
+          )
+        )
+        (wire
+          (path "Cobre traseira" 5000
+            1292600 -1274503
+            1384694 -1274503
+            1413047 -1246150
+          )
+        )
+      )
+      (net "Net-(C7-Pad2)"
+        (wire
+          (path "Cobre traseira" 3500
+            1289900 -1163600
+            1327600 -1201300
+            1327600 -1247000
+          )
+        )
+        (wire
+          (path "Cobre traseira" 3500
+            1291900 -1100100
+            1291900 -1161600
+            1289900 -1163600
+          )
+        )
+      )
+    )
+  )
+)
