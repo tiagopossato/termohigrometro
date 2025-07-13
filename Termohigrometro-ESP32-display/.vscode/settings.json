@@ -1,3 +1,6 @@
 {
-    "idf.port": "/dev/ttyACM0"
+    "idf.port": "/dev/ttyACM0",
+    "files.associations": {
+        "cmath": "cpp"
+    }
 }
