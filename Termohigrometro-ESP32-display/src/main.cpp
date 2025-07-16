@@ -9,7 +9,7 @@
 // Pino ADC para leitura da tensão da bateria (geralmente GPIO34 no T-Display)
 #define BATT_ADC_PIN 34
 // Fator de correção do divisor de tensão para a bateria (CALIBRE ESTE VALOR!)
-#define BATT_VOLTAGE_DIVIDER_FACTOR 2.0
+#define BATT_VOLTAGE_DIVIDER_FACTOR 1.909f
 // Tensão de referência interna do ADC (geralmente 3.3V para ESP32)
 #define ADC_REF_VOLTAGE 3.3
 
@@ -28,6 +28,8 @@ TFT_eSPI tft = TFT_eSPI();
 
 // Instância do sensor SHT31
 Adafruit_SHT31 sht31 = Adafruit_SHT31(&Wire1); // Usando Wire1 para evitar conflito com o TFT
+
+uint32_t startTime = 0; // Variável para armazenar o tempo de início do loop
 
 void setup()
 {
@@ -54,7 +56,7 @@ void setup()
   Wire.begin(21, 22); // Inicializa I2C nos pinos GPIO 21 (SDA) e 22 (SCL)
 
   // Inicializa o sensor SHT31
-  Wire1.begin(15, 13); // Inicializa I2C nos pinos GPIO 15 (SDA) e 13 (SCL) -----CONFERIR!---------
+  Wire1.begin(13, 15); // Inicializa I2C nos pinos GPIO 15 (SDA) e 13 (SCL) -----CONFERIR!---------
   if (!sht31.begin(0x44))
   {
     tft.setCursor(10, 30);
@@ -75,16 +77,18 @@ void setup()
   analogReadResolution(12);       // 12 bits = 0-4095
   analogSetAttenuation(ADC_11db); // Atuação de 11dB para ler até 3.3V (ou 3.9V)
 
-  delay(1000); // Pequena pausa para a mensagem de inicialização
+  startTime = millis(); // Marca o tempo de início
+
+  delay(500); // Pequena pausa para a mensagem de inicialização
 }
 
 void loop()
 {
-  static uint32_t startTime = millis(); // Marca o tempo de início do loop
+  static uint32_t loopTime = millis(); // Marca o tempo de início do loop
 
-  if (millis() - startTime > 1000)
+  if (millis() - loopTime > 1000)
   {
-    startTime = millis(); // Reseta o tempo de início a cada 1s
+    loopTime = millis(); // Reseta o tempo de início a cada 1s
 
     // --- Leitura do SHT31 ---
     float temperature = sht31.readTemperature();
@@ -95,7 +99,7 @@ void loop()
     float adc_voltage = raw_adc_value * (ADC_REF_VOLTAGE / 4095.0);
     float battery_voltage = adc_voltage * BATT_VOLTAGE_DIVIDER_FACTOR;
     // calcula o percentual de bateria
-    float battery_percentage = (battery_voltage - 3.0) / (4.2 - 3.0) * 100.0;
+    float battery_percentage = (battery_voltage - 3.1) / (4.0 - 3.1) * 100.0;
     if (battery_percentage < 0)
       battery_percentage = 0; // Garante que não fique negativo
     if (battery_percentage > 100)
@@ -188,9 +192,11 @@ void loop()
 
 void checkBatteryAndSleep(float battery_voltage)
 {
+  if(millis() - startTime < 10000) // Garante que a verificação não seja executada antes de 10 segundos
+    return;
   // --- Verifica a Tensão da Bateria ---
-  // Se a tensão da bateria for menor que 3.0V, entra em modo de economia de energia
-  if (battery_voltage < 3.0)
+  // Se a tensão da bateria for menor que 3.22V (15%), entra em modo de economia de energia
+  if (battery_voltage < 3.22)
   {
     tft.fillScreen(TFT_BLACK);
     tft.setTextColor(TFT_RED);
